@@ -4,8 +4,20 @@ var vizInit = function () {
 
     let audio = new Audio("../assets/output.wav")
     const landingContent = document.getElementById('land-cont')
+    const startBtn = document.getElementById('start-page')
 
-    window.addEventListener("load", play)
+    if (sessionStorage.getItem('loaded') == "true") {
+        startBtn.style.display = 'none'
+        play()
+    }
+
+    window.addEventListener("load", () => {
+        startBtn.addEventListener('click', () => {
+            sessionStorage.setItem('loaded', "true")
+            startBtn.style.display = 'none'
+            play()
+        })
+    })
     function play() {
         audio.play();
         play();
@@ -139,15 +151,14 @@ var vizInit = function () {
         }
 
 
-        document.getElementById('content').addEventListener('click', () => {
-            console.log("Play audio")
-            landingContent.style.display = "none"
-            // This code can be used to play audio or not
-            audio.play();
-            setTimeout(() => {
-                landingContent.style.display = "block"
-            }, 23000)
-        })
+        console.log("Play audio")
+        landingContent.style.display = "none"
+        // This code can be used to play audio or not
+        audio.play();
+        setTimeout(() => {
+            landingContent.style.display = "block"
+        }, 23000)
+
     };
 }
 
