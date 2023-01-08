@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
     res.status(200).send("Hello Code Ai server is started")
 })
 
-app.post('/', async (req, res) => {
+app.post('/convert', async (req, res) => {
     try {
         const prompt = req.body.prompt
         const response = await openai.createCompletion({

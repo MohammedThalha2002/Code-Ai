@@ -139,16 +139,15 @@ var vizInit = function () {
         }
 
 
-        window.addEventListener('click', () => {
+        document.getElementById('content').addEventListener('click', () => {
             console.log("Play audio")
             landingContent.style.display = "none"
             // This code can be used to play audio or not
             audio.play();
             setTimeout(() => {
                 landingContent.style.display = "block"
-            }, 24000)
+            }, 23000)
         })
-
     };
 }
 

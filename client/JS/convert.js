@@ -57,18 +57,24 @@ async function loadOutputfromOpenAi(inputData) {
         }
     }, 300)
     // fetch data form the server
-    let convertingPrompt = `conver the following ${document.getElementById('language1').value} code into ${document.getElementById('language2').value} : `
+    let convertingPrompt = `convert the following ${document.getElementById('language1').value} code into ${document.getElementById('language2').value} : `
 
     console.log(convertingPrompt, inputData)
-    const response = await fetch("http://localhost:5000", {
-        method: 'POST',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify({
-            prompt: convertingPrompt + inputData
+    let response;
+    try {
+        response = await fetch("http://localhost:5000/convert", {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                prompt: convertingPrompt + inputData
+            })
         })
-    })
+    } catch (error) {
+        alert(error)
+        clearInterval(loadInterval)
+    }
 
     if (response.ok) {
         clearInterval(loadInterval)
@@ -76,17 +82,18 @@ async function loadOutputfromOpenAi(inputData) {
         const data = await response.json()
         const parsedData = data.bot.trim()
         clipboardData = parsedData
-        typeText(editors, parsedData)
+        typingTextEffect(editors, parsedData)
         console.log("Data from the code Ai : ", data);
     } else {
         // TODO : show alert
         alert("Something went wrong")
+        clearInterval(loadInterval)
         const err = await response.text();
         console.log(err)
     }
 }
 
-function typeText(editor, text) {
+function typingTextEffect(editor, text) {
     let index = 0;
 
     let interval = setInterval(() => {
@@ -99,7 +106,7 @@ function typeText(editor, text) {
     }, 20)
 }
 
-clipboardBtn.addEventListener('click', ()=> {
-    console.log("copied to the clipboard : ",clipboardData)
+clipboardBtn.addEventListener('click', () => {
+    console.log("copied to the clipboard : ", clipboardData)
     navigator.clipboard.writeText(clipboardData)
 })
