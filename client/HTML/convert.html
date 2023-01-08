@@ -15,7 +15,7 @@
         <!-- nav -->
         <nav class="home-nav">
             <div class="logo">
-                <h1>CODE AI</h1>
+                <h1>&lt;CODE AI&gt;</h1>
             </div>
             <div class="nav-items">
                 <a href="home.html">
@@ -34,6 +34,7 @@
         </nav>
         <!-- languages -->
         <section class="languages-section">
+            <!-- input Editor -->
             <div class="language">
                 <select name="language1" id="language1" class="lang-selection" onchange="changeLang()">
                     <option value="javascript">JavaScript</option>
@@ -43,7 +44,9 @@
                 </select>
                 <div class="code-editor" id="inputEditor"></div>
             </div>
+            <!-- output Editor -->
             <div class="language">
+                <img id="clipboard" src="http://clipground.com/images/copy-4.png" title="Copy to Clipboard">
                 <select name="language2" id="language2" class="lang-selection" onchange="changeLang()">
                     <option value="javascript">JavaScript</option>
                     <option value="python">Python</option>
@@ -54,7 +57,7 @@
             </div>
         </section>
         <!-- convert btn -->
-        <button class="generate-btn">CONVERT</button>
+        <button class="generate-btn" id="code-convert-btn">CONVERT</button>
     </section>
     <script src="../JS/lib/ace.js"></script>
     <script src="../JS/lib/theme-monokai.js"></script>

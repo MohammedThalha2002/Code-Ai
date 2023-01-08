@@ -20,7 +20,24 @@
 
 .language {
     width: 40vw;
+    position: relative;
 }
+
+#clipboard {
+    position: absolute;
+    right: 0;
+    width: 25px;
+    top: 20px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    display: block;
+}
+
+#clipboard:hover {
+    cursor: pointer;
+}
+
 
 .code-editor {
     height: 65vh;

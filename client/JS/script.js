@@ -4,7 +4,7 @@ let navLinks = document.querySelectorAll('.nav-links')
 
 navLinks.forEach(element => {
     element.addEventListener('mouseover', () => {
-        console.log(element.id)
+        // console.log(element.id)
         if (element.id == "home-nav") {
             element.innerHTML = "HOME"
         } else if (element.id == "convert-nav") {
