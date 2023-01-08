@@ -1,0 +1,14 @@
+:root{
+  --bgColor : hsla(242, 86%, 6%, 1);
+  --bgColorLight : hsla(242, 86%, 24%, 1);
+}
+
+
+#content {
+  height: 100vh;
+  width: 100%;
+  background: var(--bgColor);
+  background: linear-gradient(135deg, var(--bgColor), var(--bgColorLight));
+  position: absolute;
+  top: 0;
+}

@@ -1,0 +1,72 @@
+:root {
+    --bgColor: hsla(242, 86%, 6%, 1);
+    --bgColorLight: hsla(242, 86%, 24%, 1);
+}
+
+.convert-page {
+    height: 100vh;
+    width: 100%;
+    background: var(--bgColor);
+    background: linear-gradient(135deg, var(--bgColor), var(--bgColorLight));
+}
+
+.languages-section {
+    height: 75vh;
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.language {
+    width: 40vw;
+}
+
+.code-editor {
+    height: 65vh;
+    width: 40vw;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    border: 1rem solid #4F4F4F;
+}
+
+.lang-selection {
+    border: 1px solid #4F4F4F;
+    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: #262A33;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.lang-selection:focus {
+    outline: none;
+    border-radius: 5px;
+}
+
+
+.generate-btn {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    background-color: #F16279;
+    border: none;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 1rem;
+}
+
+.generate-btn:hover {
+    bottom: 4.8rem;
+    cursor: pointer;
+    transition: ease-in;
+    transition-duration: 50ms;
+    box-shadow: 2px 2px 10px rgba(36, 36, 36, 0.51);
+}

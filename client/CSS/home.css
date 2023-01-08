@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.12s cubic-bezier(0.42, 0.54, 0.22, 1.26);
+}
+
+html {
+    /* This 62.5% makes 1rem = 10px */
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.landing-page {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-nav {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.logo {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 2rem;
+}
+
+.nav-items {
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-items h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    position: relative;
+}
+
+.nav-items h1:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.51);
+}
+
+.landing-content {
+    z-index: 10;
+    position: absolute;
+    bottom: 8rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: block;
+    transition: ease-in;
+    transition-duration: 50ms;
+}
+
+.landing-content h1 {
+    color: white;
+    font-size: 6rem;
+    text-align: center;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.51);
+}
+
+.generate-btn {
+    position: absolute;
+    bottom: 10rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    background-color: #252460;
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+    border-radius: 1rem;
+}
+
+.generate-btn:hover {
+    bottom: 10.2rem;
+    cursor: pointer;
+    transition: ease-in;
+    transition-duration: 50ms;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.51);
+}
