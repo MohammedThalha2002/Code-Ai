@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/explain.css">
+    <title>EXPLAIN | CODE AI</title>
 </head>
+
 <body>
-    
+    <section class="explain-page">
+        <!-- nav -->
+        <nav class="home-nav">
+            <div class="logo">
+                <h1>&lt;CODE AI&gt;</h1>
+            </div>
+            <div class="nav-items">
+                <a href="home.html">
+                    <h1 class="nav-links" id="home-nav">//HOME</h1>
+                </a>
+                <a href="convert.html">
+                    <h1 class="nav-links" id="convert-nav">//CONVERT</h1>
+                </a>
+                <a href="explain.html">
+                    <h1 class="nav-links" id="explain-nav">//EXPLAIN</h1>
+                </a>
+                <a href="error.html">
+                    <h1 class="nav-links" id="error-nav">//ERROR</h1>
+                </a>
+            </div>
+        </nav>
+        <!-- languages -->
+        <section class="languages-section">
+            <!-- input Editor -->
+            <div class="language">
+                <div class="code-editor" id="inputEditor"></div>
+            </div>
+            <!-- output Editor -->
+            <div class="language" id="outputExplanation">
+                <h1 id="outputExplanationContent">
+                </h1>
+            </div>
+        </section>
+        <!-- convert btn -->
+        <button class="generate-btn" id="code-explain-btn">EXPLAIN</button>
+    </section>
+    <script src="../JS/lib/ace.js"></script>
+    <script src="../JS/lib/theme-monokai.js"></script>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/explain.js"></script>
 </body>
+
 </html>
